@@ -24,11 +24,11 @@ class PostsIndex extends Component {
       <div>
         <div className="text-xs-right">
           <Link className="btn btn-primary" to="/posts/new">
-            Add a Post
+          Lähetä uusi viesti
           </Link>
 
         </div>
-        <h3>Posts</h3>
+        <h3>Viestit</h3>
         <ul className="list-group">
           {this.renderPosts()}
 

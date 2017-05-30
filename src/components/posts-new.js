@@ -36,22 +36,22 @@ onSubmit(values) {
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
-          label="Title"
+          label="Otsikko"
           name="title"
           component={this.renderField}
           />
         <Field
-          label="Categories"
+          label="Nimimerkki"
           name="categories"
           component={this.renderField}
           />
         <Field
-          label="Post Content"
+          label="Viesti"
           name="content"
           component={this.renderField}
           />
-        <button type="submit" className="btn btn-primary">Submit</button>
-        <Link to="/" className="btn btn-danger">Cancel</Link>
+        <button type="submit" className="btn btn-primary">Lähetä</button>
+        <Link to="/" className="btn btn-danger">Peruuta</Link>
     </form>
     );
   }
@@ -61,13 +61,13 @@ function validate(values) {
   const errors = {};
 
     if (!values.title) {
-      errors.title = "Enter a Title";
+      errors.title = "Lisää otsikko";
     }
     if (!values.categories) {
-      errors.categories = "Enter a category";
+      errors.categories = "Lisää nimimerkki";
     }
     if (!values.content) {
-      errors.content = "Enter a content";
+      errors.content = "Lisää viesti";
     }
   return errors;
 }
